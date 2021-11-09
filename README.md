@@ -17,4 +17,4 @@ Uma ficha básica cadastral do cliente é preenchida no sistema e analisada por 
 crédito da empresa que, consultando a Serasa, faz um levantamento da situação do cliente na
 praça e elabora um parecer.
 
-Sendo aprovada a ficha cadastral, o cliente recebe uma mensagem via site, cadastrada pelo"]
+Sendo aprovada a ficha cadastral, o cliente recebe uma mensagem via site, cadastrada pelo atendente da empresa que efetua a locação. "]
