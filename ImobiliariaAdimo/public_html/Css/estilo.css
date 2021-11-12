@@ -1,105 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
 body{
     width: 100%;
     height: 100%;
-    margin: 0px;
+    background: linear-gradient(to right, #0077b6, #03045e, black);   
 }
 
 ul {
     padding: 0px!important;
 }
 
-.menu-principal{
-    width: 100%;
-    background-color: rgb(156, 7, 156);  /* rgb(73, 0, 73) */
-    height: 80px;
-    margin: auto;
-    position: relative;
-}
-
-main{
-    margin: auto;
-    width: 980px;
-    float: left;
-    float: right;
-    position: relative;
-}
-
-.logo {
-    float: left;
-    padding: 10px;
-    width: 40%;
-}
-
-.redes-sociais ul li{
-    display: inline;
-    margin-left: 2px;
-    margin-right: 2px;
-}
-.redes-sociais img{
-    width: 35px;
-}
-
-.redes-sociais{
-    width: 50%;
-    float: right;
-}
-
-.header-2{
-    background-color: white;
-    width: 980px;
-    margin: 0 auto;
-    padding: 15px;
-}
-
-.menu-urls{
-    height: 80px;
-    border-bottom: 10px solid black;
-    border-top: 10px solid black;
-}
-
-.menu ul li {
-    display: inline-block;
-    color: black;
-    margin-left: 15px;
-    height: 20px;
-}
-
-.menu ul li:hover{
-    border-bottom: 3px solid rgb(156, 7, 156);
-}
-
-.menu ul li a:hover{
-    color: rgb(156, 7, 156);
-}
-
-.menu ul li a{
-    color: black;
+a {
+    color: white;
     text-decoration: none;
-    font-size: 15px;    
+    transition: 0.3s;
+}
+
+a:hover{
+    opacity: 0.7;
+}
+
+.loggo {
+    font-size: 24px;
     text-transform: uppercase;
-    margin-left: 10px;
+    letter-spacing: 4px;
 }
 
-.menu{
-    width: 80%;
-    float: left;
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to right, black, #03045e);
+    height: 8vh;
 }
 
-.busca{
-    text-align: top;
-    width: 25%;
-    float: right;
-    border-radius: 50%;
+.nav-list {
+    list-style: none;
+    display: flex;
 }
 
-.busca input{
-    background-image: url('../img/lupa.png');
-    background-repeat: no-repeat;
-    height: 32px;
-    padding: 12px;
-    width: 220px;
-    background-position: 96%;
-    border-radius: 10px;
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.mobile-menu{
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 1010px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-list{
+    position: absolute;
+    z-index: 10;
+    top: 8vh;
+    right: 0;
+    width: 50vw ;
+    height: 92vh;
+    background: linear-gradient(to right, black, #03045e);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.nav-list.active{
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1{
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2{
+    opacity: 0;
+}
+
+.mobile-menu.active .line3{
+    transform: rotate(45deg) translate(-5px, -7px);
 }
 
 .col-100{
@@ -119,7 +134,7 @@ button.slick-prev{
     position: absolute;
     background-image: url('../img/arrow-left.png');
     top: 45%;
-    left: 14%;
+    left: 8%;
 }
 
 button.slick-next{
@@ -133,7 +148,7 @@ button.slick-next{
     position: absolute;
     background-image: url('../img/arrow-right.png');
     top: 45%;
-    right: 14%;
+    right: 8%;
 }
 
 .slider-principal{
@@ -142,9 +157,9 @@ button.slick-next{
 
 .slider-principal img{
     margin-top: 0px;
-    height: 500px;
-    border-bottom: 10px solid rgb(156, 7, 156);
-    border-top: 10px solid rgb(156, 7, 156);
+    height: 460px;
+    border-top: 5px solid #03045e;
+    border-bottom: 5px solid #03045e;
 }
 
 .slick-list{
@@ -169,12 +184,12 @@ button.slick-next{
     margin: 0 auto;
     width: 50%;
     position: absolute;
-    left: 45%;
-    top: 460px;
+    left: 43%;
+    top: 400px;
 }
 
 li.slick-active button{
-    background-color: rgb(156, 7, 156);
+    background-color: #03045e;
 }
 
 .slick-dots li{
@@ -182,35 +197,299 @@ li.slick-active button{
     display: inline-block;
 }
 
-/*.menu-rapido{
-    display: inline;
-        
+@media screen and (max-width: 1010px){
+    .col-100{
+        z-index: -auto;
+        margin-bottom: 300px;
+    }
+    .slider-principal img{
+        height: 380px;
+    }
+    .slick-dots{
+        left: 42%;
+        top: 320px;
+    }
+    .slick-dots li button{
+    width: 22px;
+    height: 22px;
+    }   
+    button.slick-next{
+        top: 40%;
+        right: 5%;
+    }
+    button.slick-prev{
+        top: 40%;
+        left: 5%;
+    }
 }
-    
-.menu-rapido ul ul li{
-    background-color: #DCDCDC
+
+@media screen and (max-width: 750px){
+    .col-100{
+        z-index: -auto;
+        margin-bottom: 200px;
+    }
+    .slider-principal img{
+        height: 240px;
+    }
+    .slick-dots{
+        left: 36%;
+        top: 190px;
+    }
+    .slick-dots li button{
+    width: 22px;
+    height: 22px;
+    }   
+    button.slick-next{
+        top: 40%;
+        right: 8%;
+    }
+    button.slick-prev{
+        top: 40%;
+        left: 8%;
+    }
 }
-    
-.menu-rapido li li a:before{
-    content: '- '
+
+main.cards{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
 }
-    
-.banner-destaque {
-    border: auto;
-    width: 360px;
-    height: auto;
-    border-radius: 30px;
-    float: right;
-    background-color: gray;
-    border: 1px solid #ccc;
+
+main.cards section.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 15px 15px;
+    background: linear-gradient(to right, black, #03045e);
+    box-shadow: 0 0 1rem rgb(51, 51, 51);
+    padding: 4rem 3.5rem;
+    border-radius: 8px;
+    max-height: 450px;
+    margin-left: 32px;
+}
+
+main.cards section.card:first-child{
+    margin-left: 0;
+}
+
+main.cards section.card .icon{
+    width: 200px;
+    height: 150px;
+}
+
+main.cards section.card img{
+    width: 100%;
+}
+
+main.cards section.card h3{
+    color: white;
+    font-size: 100%;
+    margin: 16px;
+}
+
+main.cards section.card span{
+    color: white;
+    font-weight: 300px;
+    max-width: 240px;
+    font-size: 100%;
+    margin-bottom: 16px;
+}
+
+main.cards section.card button{
+    padding: 0.8rem 2.5rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 100%;
+    font-weight: 500;
     color: white;
 }
-    
-.banner-destaque img{
-    width: 310px;
-    border: auto;
-    border-radius: 18px;
+
+main.cards section.card.family button{
+    background: linear-gradient(to right, #03045e, #0077b6, white);
 }
-*/
+main.cards section.card.high button{
+    background: linear-gradient(to right, #03045e, #0077b6, white);
+}
+main.cards section.card.campo button{
+    background: linear-gradient(to right, #03045e, #0077b6, white);
+}
+main.cards section.card.family {
+    box-shadow: 20px 20px 50px --30px #DBC4FF;
+}
+main.cards section.card.high {
+    box-shadow: 20px 20px 50px --30px #afd6ff;
+}
+main.cards section.card.campo {
+    box-shadow: 20px 20px 50px --30px #ffc1d5;
+}
+
+@media screen and (max-width: 1010px){
+    main.cards {
+        flex-direction: column;
+        margin-top: px;
+    }
+    main.cards section.card{
+        padding-top: 6px;
+        margin-bottom: 32px;
+        
+    }
+    main.cards section.card .icon{
+        width: 175px;
+        height: 125px;
+    }
+    main.cards section.card span{
+        margin-left: 16px;
+        font-size: 85%;
+    }
+
+    main.cards section.card.high{
+        margin-left: 0;
+    }
+    main.cards section.card:last-child{
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 750px){
+    main.cards {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    main.cards section.card{
+        padding-left: 16px;
+        margin-bottom: 32px;
+        padding: 1rem 1.5rem;
+    }
+    main.cards section.card .icon{
+        width: 150px;
+        height: 100px;
+    }
+    main.cards section.card span{
+        margin-left: 16px;
+        font-size: 70%;
+    }
+    main.cards section.card.high{
+        margin-left: 0;
+    }
+    main.cards section.card:last-child{
+        margin-left: 0;
+    }
+    main.cards section.card button{
+    padding: 0.5rem 1rem;
+    font-size: 80%;
+    }
+}
+.container-foot{
+    max-width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col ul{
+    list-style: none;
+}
+
+.footer{
+    background: linear-gradient(to right, black, #03045e);
+    padding: 70px 0px;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: white;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    display: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    color: white;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a{
+    display: inline-block;
+    flex-wrap: wrap;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover{
+        color: #03045e;
+        background-color: white;
+}
+
+@media screen and (max-width: 1010px){
+    .footer{
+        margin-top: 150px;
+    }
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 750px){
+    .footer{
+        margin-top: 200px;
+    }
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .footer-col li a{
+    padding-left: 16px;
+    }
+}
+
+@media screen and (max-width: 570px){
+    .footer-col{
+        width: 100%;
+    }
+}
