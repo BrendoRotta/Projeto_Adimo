@@ -281,8 +281,14 @@ main.cards section.card .icon{
     height: 150px;
 }
 
+
 main.cards section.card img{
     width: 100%;
+    border-radius: 5%;
+}
+
+main.cards section.card.high img{
+    height: 135px;
 }
 
 main.cards section.card h3{
@@ -296,7 +302,7 @@ main.cards section.card span{
     font-weight: 300px;
     max-width: 240px;
     font-size: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 main.cards section.card button{
@@ -332,15 +338,13 @@ main.cards section.card.campo {
 @media screen and (max-width: 1010px){
     main.cards {
         flex-direction: column;
-        margin-top: px;
     }
     main.cards section.card{
-        padding-top: 6px;
+        padding-top: 15px;
         margin-bottom: 32px;
-        
     }
     main.cards section.card .icon{
-        width: 175px;
+        width: 200px;
         height: 125px;
     }
     main.cards section.card span{
@@ -366,13 +370,16 @@ main.cards section.card.campo {
         margin-bottom: 32px;
         padding: 1rem 1.5rem;
     }
+    main.cards section.card.high .icon{
+        width: 180px;
+    }
     main.cards section.card .icon{
         width: 150px;
         height: 100px;
     }
     main.cards section.card span{
         margin-left: 16px;
-        font-size: 70%;
+        font-size: 80%;
     }
     main.cards section.card.high{
         margin-left: 0;
@@ -385,6 +392,7 @@ main.cards section.card.campo {
     font-size: 80%;
     }
 }
+
 .container-foot{
     max-width: 1170px;
     margin: auto;
@@ -447,7 +455,7 @@ main.cards section.card.campo {
     padding-left: 8px;
 }
 
-.footer-col .social-links a{
+/* .footer-col .social-links a{
     display: inline-block;
     flex-wrap: wrap;
     height: 40px;
@@ -464,20 +472,28 @@ main.cards section.card.campo {
 .footer-col .social-links a:hover{
         color: #03045e;
         background-color: white;
+} */
+
+.footer-cool .social-links a i{
+    background-color: white;
+    border-radius: 50%;
 }
 
 @media screen and (max-width: 1010px){
     .footer{
-        margin-top: 150px;
+        padding: 70px 50px;
+        margin-top: 250px;
     }
     .footer-col{
         width: 50%;
         margin-bottom: 30px;
     }
 }
+
 @media screen and (max-width: 750px){
     .footer{
-        margin-top: 200px;
+        padding: 70px 50px;
+        margin-top: 100px;
     }
     .footer-col{
         width: 50%;

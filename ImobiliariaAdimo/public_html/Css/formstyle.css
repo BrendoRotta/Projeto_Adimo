@@ -148,6 +148,10 @@ form input[type="submit"]:hover{
 
 @media screen and (max-width: 750px){
     main.container{
-    min-height: 30vh;
+        min-height: 30vh;
+    }
+
+    body{
+        min-width: 45vh;
     }
 }

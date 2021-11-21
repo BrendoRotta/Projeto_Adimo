@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #0077b6, #03045e, black);   
+}
+
+ul {
+    padding: 0px!important;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover{
+    opacity: 0.7;
+}
+
+.loggo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to right, black, #03045e);
+    height: 8vh;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.mobile-menu{
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 1010px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-list{
+    position: absolute;
+    z-index: 10;
+    top: 8vh;
+    right: 0;
+    width: 50vw ;
+    height: 92vh;
+    background: linear-gradient(to right, black, #03045e);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.nav-list.active{
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1{
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2{
+    opacity: 0;
+}
+
+.mobile-menu.active .line3{
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.banner img{
+    width: 150vh;
+    height: 70vh;
+    display: flex;
+    margin-left: 27vh;
+    margin-top: 1vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-container img{
+    width: 45vh;
+    height: 30vh;
+    margin-left: 1vh;
+    margin-top: 2vh;
+}
+
+.flex-container .family-sala img{
+    margin-left: 10vh;
+}
+
+
+.container-text{
+    width: 150vh;
+    height: 200vh;
+    background-color: white;
+    display: flex;
+    margin-left: 27vh;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+.container-foot{
+    max-width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col ul{
+    list-style: none;
+}
+
+.footer{
+    background: linear-gradient(to right, black, #03045e);
+    padding: 70px 50px;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: white;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    display: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    color: white;
+    padding-left: 8px;
+}
+
+/* .footer-col .social-links a{
+    display: inline-block;
+    flex-wrap: wrap;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover{
+        color: #03045e;
+        background-color: white;
+} */
+
+.footer-cool .social-links a i{
+    background-color: white;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 1010px){
+    .footer{
+        padding: 70px 50px;
+        margin-top: 250px;
+    }
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .footer{
+        padding: 70px 50px;
+        margin-top: 100px;
+    }
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .footer-col li a{
+    padding-left: 16px;
+    }
+}
+
+@media screen and (max-width: 570px){
+    .footer-col{
+        width: 100%;
+    }
+}
