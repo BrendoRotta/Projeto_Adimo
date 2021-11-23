@@ -316,13 +316,7 @@ main.cards section.card button{
     color: white;
 }
 
-main.cards section.card.family button{
-    background: linear-gradient(to right, #03045e, #0077b6, white);
-}
-main.cards section.card.high button{
-    background: linear-gradient(to right, #03045e, #0077b6, white);
-}
-main.cards section.card.campo button{
+main.cards button{
     background: linear-gradient(to right, #03045e, #0077b6, white);
 }
 main.cards section.card.family {
@@ -394,12 +388,12 @@ main.cards section.card.campo {
 }
 
 .container-foot{
-    max-width: 1170px;
-    margin: auto;
-}
+    width: 1170px;
+} 
+
 .row{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row-reverse;
 }
 
 .footer-col ul{
@@ -408,7 +402,7 @@ main.cards section.card.campo {
 
 .footer{
     background: linear-gradient(to right, black, #03045e);
-    padding: 70px 0px;
+    padding: 50px 50px;
 }
 
 .footer-col{
@@ -455,9 +449,9 @@ main.cards section.card.campo {
     padding-left: 8px;
 }
 
-/* .footer-col .social-links a{
-    display: inline-block;
-    flex-wrap: wrap;
+.footer-col .social-links a{
+    display: flex;
+    flex-direction: row-reverse;
     height: 40px;
     width: 40px;
     background-color: rgba(255,255,255,0.2);
@@ -470,14 +464,9 @@ main.cards section.card.campo {
 }
 
 .footer-col .social-links a:hover{
-        color: #03045e;
-        background-color: white;
-} */
-
-.footer-cool .social-links a i{
+    color: #03045e;
     background-color: white;
-    border-radius: 50%;
-}
+} 
 
 @media screen and (max-width: 1010px){
     .footer{
