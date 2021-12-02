@@ -145,9 +145,43 @@ nav{
     margin-left: 10vh;
 }
 
+@media screen and (max-width: 1010px){
+    .banner img{
+        width: 110vh;
+        height: 50vh;
+        margin-left: 18vh;
+    }
+
+    .flex-container img{
+        width: 30vh;
+        height: 20vh;
+    }
+
+    .flex-container .family-sala img{
+        margin-left: 10vh;
+    }
+}
+
+@media screen and (max-width: 930px){
+    .banner img{
+        width: 90vh;
+        height: 50vh;
+        margin-left: 17vh;
+    }
+
+    .flex-container img{
+        width: 28vh;
+        height: 20vh;
+    }
+
+    .flex-container .family-sala img{
+        margin-left: 5vh;
+    }
+}
+
 .container-text{
     width: 150vh;
-    height: 140vh;
+    height: 145vh;
     box-shadow: 0 0 1rem black;
     background-color: white;
     border-radius: 2%;
@@ -168,7 +202,7 @@ nav{
 }
 .icons .text-valor{
     margin-top: 1vh;
-    margin-right: 78vh;
+    margin-right: 80vh;
 }
 
 .icons .icons-house{
@@ -195,7 +229,7 @@ nav{
 
 .contact-area{
     width: 137vh;
-    height: 75vh;
+    height: 80vh;
     background: linear-gradient(to right, black, #03045e);
     border-radius: 2%;
     box-shadow: 0 0 1rem black;
@@ -226,7 +260,7 @@ nav{
     background: linear-gradient(to right, #03045e, #0077b6, #03045e);
     box-shadow: 0 0 1rem black;
     margin-top: 5vh;
-    margin-left: 25vh;
+    margin-left: 28vh;
     z-index: 3;
     display: flex;
     flex-direction: row;
@@ -239,6 +273,7 @@ nav{
     margin-left: 5vh;
     margin-top: 2vh;
     border-radius: 5%;
+    box-shadow: 0 0 1rem black;
 }
 
 .card-contact .contact2{
@@ -257,6 +292,7 @@ nav{
     margin-top: 2vh;
     margin-left: 5vh;
     margin-right: 4vh;
+    box-shadow: 0 0 1rem black;
 }
 
 .card-contact h2{
@@ -274,9 +310,93 @@ nav{
     font-size: 80%;
     font-weight: 500;
     color: white;
-    background: linear-gradient(to right, #03045e, #0077b6, black);
+    background-color: rgb(52, 175, 35);
+    box-shadow: 0 0 1rem black;
     margin-left: 7vh;
     margin-top: 2vh;
+}
+
+@media screen and (max-width: 1010px){
+    .container-text {
+        width: 127vh;
+        height: 150vh;
+        margin-left: 8vh;
+    }
+    .icons .text-valor{
+        margin-top: 1vh;
+        margin-right: 64vh;
+    }
+    .icons .icons-house{
+        margin: 1vh;
+    }
+    .icons .icons-car{
+        margin: 1vh;
+    }
+    .contact-area{
+        width: 114vh;
+        height: 78vh;
+    }
+    .card-contact img{
+        width: 25vh;
+        height: 23vh;
+    }
+    .card-contact .contact2 img{
+        width: 25vh;
+        height: 23vh;
+    }
+    .card-contact{
+        width: 34vh;
+        height: 47vh;
+        margin-left: 20vh;
+    }
+    .card-contact .contact2{
+        width: 34vh;
+        height: 47vh;
+    }
+    .card-contact h2{
+        margin-left: 6vh;
+    }
+}
+@media screen and (max-width: 930px){
+    .container-text {
+        width: 118vh;
+        height: 150vh;
+        margin-left: 3vh;
+    }
+    .icons .text-valor{
+        margin-top: 1vh;
+        margin-right: 54vh;
+    }
+    .icons .icons-house{
+        margin: 1vh;
+    }
+    .icons .icons-car{
+        margin: 1vh;
+    }
+    .contact-area{
+        width: 105vh;
+        height: 78vh;
+    }
+    .card-contact img{
+        width: 24vh;
+        height: 22vh;
+    }
+    .card-contact .contact2 img{
+        width: 24vh;
+        height: 22vh;
+    }
+    .card-contact{
+        width: 34vh;
+        height: 47vh;
+        margin-left: 17vh;
+    }
+    .card-contact .contact2{
+        width: 34vh;
+        height: 47vh;
+    }
+    .card-contact h2{
+        margin-left: 6vh;
+    }
 }
 
 .container-foot{
@@ -340,6 +460,10 @@ nav{
     padding-left: 8px;
 }
 
+.footer-col li a{
+    padding-left: 16px;
+}
+
 .footer-col .social-links a{
     display: inline-block;
     flex-wrap: wrap;
@@ -357,34 +481,41 @@ nav{
 .footer-col .social-links a:hover{
     color: #03045e;
     background-color: white;
+    text-align: center;
 } 
 
 @media screen and (max-width: 1010px){
     .footer{
         padding: 70px 50px;
-        margin-top: 250px;
+        margin-top: 12vh;
     }
     .footer-col{
         width: 50%;
         margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 890px){
+    .footer{
+        padding: 70px 50px;
+    }
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .footer-col .social-links{
+        padding-left: 16px;
+    }
+    .footer-col .social-links a{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-col .social-links a i{
+        margin-top: 1.75vh;
     }
 }
 
 @media screen and (max-width: 750px){
-    .footer{
-        padding: 70px 50px;
-        margin-top: 100px;
-    }
-    .footer-col{
-        width: 50%;
-        margin-bottom: 30px;
-    }
-    .footer-col li a{
-    padding-left: 16px;
-    }
-}
-
-@media screen and (max-width: 570px){
     .footer-col{
         width: 100%;
     }

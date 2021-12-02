@@ -152,14 +152,17 @@ button.slick-next{
 }
 
 .slider-principal{
-    width: 100%;
+    width: 90%;
+    margin-left: 10vh;
+    box-shadow: 0 0 1rem black;
+    margin-top: 1vh;
 }
 
 .slider-principal img{
     margin-top: 0px;
     height: 460px;
-    border-top: 5px solid #03045e;
-    border-bottom: 5px solid #03045e;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .slick-list{
@@ -390,10 +393,9 @@ main.cards section.card.campo {
 .container-foot{
     width: 1170px;
 } 
-
 .row{
     display: flex;
-    flex-direction: row-reverse;
+    flex-wrap: wrap;
 }
 
 .footer-col ul{
@@ -402,7 +404,8 @@ main.cards section.card.campo {
 
 .footer{
     background: linear-gradient(to right, black, #03045e);
-    padding: 50px 50px;
+    padding: 50px;
+    padding-left: 18vh;
 }
 
 .footer-col{
@@ -449,9 +452,13 @@ main.cards section.card.campo {
     padding-left: 8px;
 }
 
+.footer-col li a{
+    padding-left: 16px;
+}
+
 .footer-col .social-links a{
-    display: flex;
-    flex-direction: row-reverse;
+    display: inline-block;
+    flex-wrap: wrap;
     height: 40px;
     width: 40px;
     background-color: rgba(255,255,255,0.2);
@@ -468,10 +475,14 @@ main.cards section.card.campo {
     background-color: white;
 } 
 
+.footer-col .social-links a i{
+    margin-top: 1.75vh;
+}
+
 @media screen and (max-width: 1010px){
     .footer{
         padding: 70px 50px;
-        margin-top: 250px;
+        margin-top: 44vh;
     }
     .footer-col{
         width: 50%;
@@ -479,21 +490,30 @@ main.cards section.card.campo {
     }
 }
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 890px){
     .footer{
         padding: 70px 50px;
-        margin-top: 100px;
     }
     .footer-col{
         width: 50%;
         margin-bottom: 30px;
     }
     .footer-col li a{
-    padding-left: 16px;
+        padding-left: 16px;
+    }
+    .footer-col .social-links{
+        padding-left: 16px;
+    }
+    .footer-col .social-links a{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-col .social-links a i{
+        margin-top: 1.75vh;
     }
 }
 
-@media screen and (max-width: 570px){
+@media screen and (max-width: 750px){
     .footer-col{
         width: 100%;
     }
