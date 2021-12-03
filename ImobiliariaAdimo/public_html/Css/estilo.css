@@ -47,6 +47,46 @@ nav{
 .nav-list li{
     letter-spacing: 3px;
     margin-left: 32px;
+    margin-top: 20px;
+}
+
+.search-box{
+    transform: translate(-50%, -50%);
+    background: none;
+    height: 5vh;
+    width: 32vh;
+    border-radius: 10vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5vh;
+}
+
+.search-btn{
+    width: 4.5vh;
+    height: 4vh;
+    margin-top: 3px;
+    border-radius: 50%;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+.search-txt{
+    background: none;
+    outline: none;
+    border: none;
+    width: 0%;
+    color: white;
+}
+
+.search-box:hover > .search-txt{
+    width: 130px;
+    padding: 0 7px;
+}
+.search-box:hover > .search-btn{
+    background: none;
 }
 
 .mobile-menu{
@@ -72,7 +112,7 @@ nav{
     z-index: 10;
     top: 8vh;
     right: 0;
-    width: 50vw ;
+    width: 52vw ;
     height: 92vh;
     background: linear-gradient(to right, black, #03045e);
     flex-direction: column;
@@ -87,6 +127,10 @@ nav{
     }
     .mobile-menu {
         display: block;
+    }
+    .search-box{
+        margin-left: 33.5vh;
+        background: none;
     }
 }
 
@@ -187,8 +231,8 @@ button.slick-next{
     margin: 0 auto;
     width: 50%;
     position: absolute;
-    left: 43%;
-    top: 400px;
+    left: 44%;
+    top: 415px;
 }
 
 li.slick-active button{
@@ -205,6 +249,9 @@ li.slick-active button{
         z-index: -auto;
         margin-bottom: 300px;
     }
+    .slider-principal{
+        margin-left: 2vh;
+    }
     .slider-principal img{
         height: 380px;
     }
@@ -213,8 +260,8 @@ li.slick-active button{
         top: 320px;
     }
     .slick-dots li button{
-    width: 22px;
-    height: 22px;
+        width: 22px;
+        height: 22px;
     }   
     button.slick-next{
         top: 40%;
@@ -231,16 +278,19 @@ li.slick-active button{
         z-index: -auto;
         margin-bottom: 200px;
     }
+    .slider-principal{
+        margin-left: 2vh;
+    }
     .slider-principal img{
         height: 240px;
     }
     .slick-dots{
-        left: 36%;
+        left: 28%;
         top: 190px;
     }
     .slick-dots li button{
-    width: 22px;
-    height: 22px;
+        width: 22px;
+        height: 22px;
     }   
     button.slick-next{
         top: 40%;

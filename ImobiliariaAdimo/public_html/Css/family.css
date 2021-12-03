@@ -47,6 +47,46 @@ nav{
 .nav-list li{
     letter-spacing: 3px;
     margin-left: 32px;
+    margin-top: 20px;
+}
+
+.search-box{
+    transform: translate(-50%, -50%);
+    background: none;
+    height: 5vh;
+    width: 32vh;
+    border-radius: 10vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5vh;
+}
+
+.search-btn{
+    width: 4.5vh;
+    height: 4vh;
+    margin-top: 3px;
+    border-radius: 50%;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+.search-txt{
+    background: none;
+    outline: none;
+    border: none;
+    width: 0%;
+    color: white;
+}
+
+.search-box:hover > .search-txt{
+    width: 130px;
+    padding: 0 7px;
+}
+.search-box:hover > .search-btn{
+    background: none;
 }
 
 .mobile-menu{
@@ -72,7 +112,7 @@ nav{
     z-index: 10;
     top: 8vh;
     right: 0;
-    width: 50vw ;
+    width: 52vw ;
     height: 92vh;
     background: linear-gradient(to right, black, #03045e);
     flex-direction: column;
@@ -181,7 +221,7 @@ nav{
 
 .container-text{
     width: 150vh;
-    height: 140vh;
+    height: 148vh;
     box-shadow: 0 0 1rem black;
     background-color: white;
     border-radius: 2%;
@@ -227,9 +267,22 @@ nav{
     padding-top: 2vh;
 }
 
+.desc-text button{
+    padding: 0.8rem 2.5rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 100%;
+    font-weight: 500;
+    color: #0077b6;
+    margin-top: 3vh;
+    margin-left: 57vh;
+}
+
 .contact-area{
     width: 137vh;
-    height: 75vh;
+    height: 82vh;
     background: linear-gradient(to right, black, #03045e);
     border-radius: 2%;
     box-shadow: 0 0 1rem black;
@@ -310,7 +363,7 @@ nav{
     font-size: 80%;
     font-weight: 500;
     color: white;
-    background-color: rgb(52, 175, 35);
+    background-color: #0077b6;
     box-shadow: 0 0 1rem black;
     margin-left: 7vh;
     margin-top: 2vh;
